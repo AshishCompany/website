@@ -93,6 +93,7 @@ privacyEnhanced = true
 dir = ":cacheDir/modules"
 maxAge = -1
 
+
 [markup]
 defaultMarkdownHandler = "goldmark"
 
@@ -101,8 +102,17 @@ defaultMarkdownHandler = "goldmark"
 unsafe = true
 
 [module]
+
 [[module.imports]]
 path = "github.com/gohugoio/hugo-mod-jslibs/instantpage"
+
+[[module.mounts]]
+source = "assets/scss"
+target = "assets/scss"
+
+[[module.mounts]]
+source = "static/img"
+target = "assets/img"
 
 [languages]
 [languages.en]
